@@ -1,8 +1,4 @@
-
-const submit = document.getElementById('submit');
-
-submit.addEventListener("click", event => {
-  event.preventDefault();
+function Submit() {
   let currency = document.getElementById('currency');
   let purchase = document.getElementById('purchase');
   let date = document.getElementById('date');
@@ -13,7 +9,6 @@ submit.addEventListener("click", event => {
 
   let deleteButton = document.createElement('button');
   deleteButton.textContent = "X";
-  deleteButton.id = "deleteButton";
 
   let newExpenseItemContent1 = document.createElement('td');
   newExpenseItemContent1.textContent = expenseItemArray[0];
@@ -34,11 +29,9 @@ submit.addEventListener("click", event => {
   newExpenseItemRow.appendChild(newExpenseItemContent4);
   newExpenseItemRow.appendChild(deleteButton);
 
-})
+  deleteButton.addEventListener('click', () => deleteRow(deleteButton));
+}
 
-
-// let deleteButtonOuter = document.getElementById('deleteButton');
-
-// deleteButtonOuter.addEventListener("click", event => {
-//   event.preventDefault();
-// })
+function deleteRow(element) {
+  element.parentElement.remove();
+}
