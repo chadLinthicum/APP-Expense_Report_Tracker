@@ -1,26 +1,22 @@
-function Submit() {
-  let currency = document.getElementById('currency');
+function submit() {
+  let paymentType = document.getElementById('paymentType');
   let purchase = document.getElementById('purchase');
   let date = document.getElementById('date');
   let amount = document.getElementById('amount');
-  let expenseItemArray = [currency.value, purchase.value, date.value, amount.value];
   let expenseItems = document.getElementById('expenseItems');
   let newExpenseItemRow = document.createElement('tr');
-
-  let deleteButton = document.createElement('button');
-  deleteButton.textContent = "X";
-
+  
   let newExpenseItemContent1 = document.createElement('td');
-  newExpenseItemContent1.textContent = expenseItemArray[0];
-
   let newExpenseItemContent2 = document.createElement('td');
-  newExpenseItemContent2.textContent = expenseItemArray[1];
-
   let newExpenseItemContent3 = document.createElement('td');
-  newExpenseItemContent3.textContent = expenseItemArray[2];
-
   let newExpenseItemContent4 = document.createElement('td');
-  newExpenseItemContent4.textContent = expenseItemArray[3];
+  let deleteButton = document.createElement('button');
+    
+  newExpenseItemContent1.textContent = paymentType.value;
+  newExpenseItemContent2.textContent = purchase.value;
+  newExpenseItemContent3.textContent = date.value;
+  newExpenseItemContent4.textContent = amount.value;
+  deleteButton.textContent = "X";
 
   expenseItems.appendChild(newExpenseItemRow);
   newExpenseItemRow.appendChild(newExpenseItemContent1);
@@ -30,6 +26,7 @@ function Submit() {
   newExpenseItemRow.appendChild(deleteButton);
 
   deleteButton.addEventListener('click', () => deleteRow(deleteButton));
+  deleteButton.className = "deleteButtons";
 }
 
 function deleteRow(element) {
