@@ -6,7 +6,7 @@
 <br>
 <b>Download: </b><a href="https://github.com/chadLinthicum/APP_Expense-Report-Tracker_VanillaJS"> Here</a><br>
 <br>
-<b>Installation:</b> Download the repository and<br>simply open the index.html file.<br>
+<b>Installation:</b> Download the repository and<br> open the index.html file.<br>
 <br>
 <b>Logistics:</b> Project consists of JS, HTML, and CSS. <br>Practices include child appending and working with the DOM.<br>
 <br>
